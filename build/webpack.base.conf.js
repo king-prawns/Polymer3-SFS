@@ -17,10 +17,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.hbs$/,
-        loader: 'handlebars-loader'
-      },
-      {
         test: /\.js$/,
         loader: 'babel-loader',
         options: {
