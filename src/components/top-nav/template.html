@@ -1,0 +1,71 @@
+<div>
+  <nav>
+    <div class="navbar-header">
+      <a class="navbar-brand">
+        <img class="brand" src="/images/brand.png">
+      </a>
+    </div>
+    <div class="navbar-body">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#/users">
+            [[ i18n.USER_LIST ]]
+          </a>
+        </li>
+        <li>
+          <a href="#/posts">
+            [[ i18n.POST_LIST ]]
+          </a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <select-lang></select-lang>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<style>
+  ul {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    list-style: none;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    background-color: rgb(233, 131, 153);
+    border-color: transparent !important;
+  }
+
+  nav a {
+    color: black !important;
+  }
+
+  nav #changeLanguage {
+    margin-top: 10px;
+  }
+
+  .navbar-brand {
+    padding: 0 15px !important;
+  }
+
+  .navbar-brand .brand {
+    height: 50px;
+  }
+
+  .navbar-body {
+    flex: 1;
+  }
+</style>

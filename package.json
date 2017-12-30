@@ -21,6 +21,7 @@
     "eslint-plugin-import": "2.2.0",
     "express": "4.15.2",
     "extract-text-webpack-plugin": "2.1.0",
+    "favicons-webpack-plugin": "0.0.7",
     "file-loader": "0.10.1",
     "html-loader": "0.5.1",
     "html-webpack-plugin": "2.28.0",
@@ -42,7 +43,6 @@
   "dependencies": {
     "@polymer/polymer": "3.0.0-pre.1",
     "@webcomponents/webcomponentsjs": "1.0.22",
-    "bootstrap": "3.3.7",
-    "normalize.css": "7.0.0"
+    "director": "1.2.8"
   }
 }

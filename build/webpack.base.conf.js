@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const utils = require('./utils');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 process.noDeprecation = true;
 
@@ -47,6 +48,7 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       webpackGlobal: 'webpackGlobal'
-    })
+    }),
+    new FaviconsWebpackPlugin('./favicon.png')
   ]
 };

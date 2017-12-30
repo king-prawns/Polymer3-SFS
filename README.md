@@ -67,8 +67,8 @@ b) for prod build: [localhost:8080](http://localhost:8080/)
 
 * include 3rd-party JS library
 * [Webpack](https://webpack.github.io/)
-* [Normalize.css](https://necolas.github.io/normalize.css/)
-* [Bootstrap](http://getbootstrap.com/)
+* [Favicons Webpack Plugin](https://github.com/jantimon/favicons-webpack-plugin)
+* [Director router](https://github.com/flatiron/director)
 * NO unit/integration test has been developed
 
 ## Conclusion

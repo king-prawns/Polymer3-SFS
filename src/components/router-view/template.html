@@ -1,0 +1,15 @@
+<div>
+  <template is="dom-if" if="[[isCurrent(page.current, 'users')]]" restamp>
+    <my-element name="Mario"></my-element>
+    Users Page
+  </template>
+  <template is="dom-if" if="[[isCurrent(page.current, 'user')]]" restamp>
+    User Page
+  </template>
+  <template is="dom-if" if="[[isCurrent(page.current, 'todos')]]" restamp>
+    Todos Page
+  </template>
+  <template is="dom-if" if="[[isCurrent(page.current, 'posts')]]" restamp>
+    Posts Page
+  </template>
+</div>

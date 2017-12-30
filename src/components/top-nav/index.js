@@ -1,16 +1,15 @@
 import { Element as PolymerElement } from '@polymer/polymer/polymer-element';
 import * as view from './template.html';
 
-export class MyElement extends PolymerElement {
+export class TopNav extends PolymerElement {
   static get template() {
     return view;
   }
 
   static get properties() {
     return {
-      name: {
-        type: String,
-        value: 'Foobar'
+      i18n: {
+        type: Object
       }
     };
   }
@@ -20,4 +19,4 @@ export class MyElement extends PolymerElement {
   }
 }
 
-customElements.define('my-element', MyElement);
+customElements.define('top-nav', TopNav);
