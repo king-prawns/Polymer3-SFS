@@ -11,7 +11,9 @@ module.exports = {
     'comma-dangle': [2, 'never'],
     'max-len': [0],
     'arrow-body-style': ['error', 'as-needed'],
-    'import/prefer-default-export': 0
+    'linebreak-style': 0,
+    'import/prefer-default-export': 0,
+    'import/no-extraneous-dependencies': 0
   },
   settings: {
     'import/resolver': {

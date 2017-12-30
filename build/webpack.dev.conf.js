@@ -30,8 +30,7 @@ module.exports = merge(baseWebpackConfig, {
       disable: true
     }),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'index.html',
+      template: 'index.ejs',
       title: 'DEV - Polymer 3 App',
       inject: true
     })

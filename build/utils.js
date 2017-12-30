@@ -27,12 +27,6 @@ module.exports = {
       },
       {
         loader: 'resolve-url-loader' // resolves relative paths based on the original source file.
-      },
-      {
-        loader: 'sass-loader', // compiles Sass to CSS
-        options: {
-          sourceMap: true
-        }
       }
     ];
     if (!isProd) {
@@ -41,7 +35,7 @@ module.exports = {
       });
     }
     return {
-      test: /(\.scss|\.css)$/,
+      test: /(\.css)$/,
       use: ExtractTextPlugin.extract({
         use: uses
       })

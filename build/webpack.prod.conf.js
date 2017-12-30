@@ -46,8 +46,8 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     new HtmlWebpackPlugin({
       filename: config.build.index,
-      template: 'index.html',
-      title: 'Webpack 2',
+      template: 'index.ejs',
+      title: 'Polymer 3 App',
       inject: true,
       minify: {
         removeComments: true,
@@ -79,7 +79,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       {
         from: path.resolve(__dirname, '../static'),
         to: config.build.assetsSubDirectory,
-        ignore: ['.*', 'styles/*', 'fonts/*']
+        ignore: ['.*', 'fonts/*']
       }
     ])
   ]

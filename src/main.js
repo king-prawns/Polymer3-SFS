@@ -1,4 +1,4 @@
-import hello from 'Components/Hello/helloWorld';
-import '../static/styles/main.scss';
-
-hello();
+import 'bootstrap/dist/css/bootstrap.css';
+import 'normalize.css/normalize.css';
+import '@webcomponents/webcomponentsjs/webcomponents-loader';
+import './components/polymer-app';

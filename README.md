@@ -65,10 +65,10 @@ b) for prod build: [localhost:8080](http://localhost:8080/)
 
 ## Features
 
-* single file components (.vue)
 * include 3rd-party JS library
 * [Webpack](https://webpack.github.io/)
 * [Normalize.css](https://necolas.github.io/normalize.css/)
+* [Bootstrap](http://getbootstrap.com/)
 * NO unit/integration test has been developed
 
 ## Conclusion

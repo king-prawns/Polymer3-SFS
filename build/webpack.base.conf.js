@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const utils = require('./utils');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 process.noDeprecation = true;
 
@@ -17,13 +16,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        options: {
-          plugins: ['transform-runtime'],
-          presets: ['es2015']
-        },
-        include: [utils.resolve('src')]
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader'
+        }
       },
       {
         test: /\.js$/,
@@ -51,11 +47,6 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       webpackGlobal: 'webpackGlobal'
-    }),
-    new StyleLintPlugin({
-      configFile: '.stylelintrc',
-      files: '**/*.scss',
-      failOnError: false
     })
   ]
 };
