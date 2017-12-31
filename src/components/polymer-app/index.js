@@ -1,7 +1,8 @@
 import { Element as PolymerElement } from '@polymer/polymer/polymer-element';
 import { Router } from 'director/build/director';
 import * as view from './template.html';
-import * as i18n from '../../translate/en.json';
+import * as IT from '../../translate/it.json';
+import * as EN from '../../translate/en.json';
 import '../my-header';
 import '../top-nav';
 import '../router-view';
@@ -15,7 +16,7 @@ export class PolymerApp extends PolymerElement {
     return {
       i18n: {
         type: Object,
-        value: i18n
+        value: EN
       },
       page: {
         type: String,
@@ -51,6 +52,11 @@ export class PolymerApp extends PolymerElement {
         param: p
       }
     );
+  }
+
+  onlangSelected(e) {
+    e.stopPropagation();
+    this.i18n = Object.assign({}, e.detail.lang === 'it' ? IT : EN);
   }
 }
 

@@ -1,8 +1,7 @@
 import { Element as PolymerElement } from '@polymer/polymer/polymer-element';
 import * as view from './template.html';
-import '../select-lang';
 
-export class TopNav extends PolymerElement {
+export class SelectLang extends PolymerElement {
   static get template() {
     return view;
   }
@@ -18,6 +17,18 @@ export class TopNav extends PolymerElement {
   connectedCallback() {
     super.connectedCallback();
   }
+
+  changeLanguage(e) {
+    this.dispatchEvent(
+      new CustomEvent('lang-selected', {
+        bubbles: true,
+        composed: true,
+        detail: {
+          lang: e.target.dataset.lang
+        }
+      })
+    );
+  }
 }
 
-customElements.define('top-nav', TopNav);
+customElements.define('select-lang', SelectLang);

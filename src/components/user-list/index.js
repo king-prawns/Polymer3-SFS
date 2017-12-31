@@ -1,7 +1,7 @@
 import { Element as PolymerElement } from '@polymer/polymer/polymer-element';
 import * as view from './template.html';
 
-export class MyElement extends PolymerElement {
+export class UserList extends PolymerElement {
   static get template() {
     return view;
   }
@@ -20,4 +20,4 @@ export class MyElement extends PolymerElement {
   }
 }
 
-customElements.define('my-element', MyElement);
+customElements.define('user-list', UserList);

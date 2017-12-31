@@ -1,7 +1,6 @@
 <div>
   <template is="dom-if" if="[[isCurrent(page.current, 'users')]]" restamp>
-    <my-element name="Mario"></my-element>
-    Users Page
+    <user-list i18n="[[i18n]]"></user-list>
   </template>
   <template is="dom-if" if="[[isCurrent(page.current, 'user')]]" restamp>
     User Page
