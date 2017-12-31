@@ -1,5 +1,3 @@
-# WORK IN PROGRESS...
-
 # Polymer3-SFS
 
 Polymer 3 project - Start from scratch
