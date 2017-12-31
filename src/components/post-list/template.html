@@ -1,0 +1,56 @@
+<div id="posts">
+  <template is="dom-repeat" items="[[posts]]" as="post">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        [[post.title]]
+      </div>
+      <div class="panel-body">
+        <p>[[post.body]]</p>
+        <button data-id$="[[post.userId]] " on-click="clickHandler">
+          [[ i18n.GO_TO_USER ]]
+        </button>
+      </div>
+    </div>
+  </template>
+</div>
+
+<style>
+  .panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  }
+
+  .panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  .panel-body {
+    padding: 15px;
+  }
+
+  .panel-body::before {
+    display: table;
+    content: " ";
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  button {
+    cursor: pointer;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+  }
+</style>

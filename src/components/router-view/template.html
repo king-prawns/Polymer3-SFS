@@ -3,12 +3,12 @@
     <user-list i18n="[[i18n]]"></user-list>
   </template>
   <template is="dom-if" if="[[isCurrent(page.current, 'user')]]" restamp>
-    User Page
+    <user-detail i18n="[[i18n]]" user-id="[[page.param]]"></user-detail>
   </template>
   <template is="dom-if" if="[[isCurrent(page.current, 'todos')]]" restamp>
-    Todos Page
+    <todo-list i18n="[[i18n]]" user-id="[[page.param]]"></todo-list>
   </template>
   <template is="dom-if" if="[[isCurrent(page.current, 'posts')]]" restamp>
-    Posts Page
+    <post-list i18n="[[i18n]]"></post-list>
   </template>
 </div>

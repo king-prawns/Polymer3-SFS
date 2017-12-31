@@ -2,6 +2,9 @@ import { Element as PolymerElement } from '@polymer/polymer/polymer-element';
 import '@polymer/polymer/lib/elements/dom-if';
 import * as view from './template.html';
 import '../user-list';
+import '../user-detail';
+import '../todo-list';
+import '../post-list';
 
 export class RouterView extends PolymerElement {
   static get template() {

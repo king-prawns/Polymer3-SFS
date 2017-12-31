@@ -3,7 +3,7 @@ import '@polymer/polymer/lib/elements/dom-repeat';
 import * as view from './template.html';
 import api from '../api';
 
-export class UserList extends PolymerElement {
+export class TodoList extends PolymerElement {
   static get template() {
     return view;
   }
@@ -13,7 +13,10 @@ export class UserList extends PolymerElement {
       i18n: {
         type: Object
       },
-      users: {
+      userId: {
+        type: Number
+      },
+      todos: {
         type: Array,
         value: []
       }
@@ -26,14 +29,18 @@ export class UserList extends PolymerElement {
   }
 
   fetchData() {
-    api.get('/users').then((users) => {
-      this.users = users;
+    api.get(`/todos?userId=${this.userId}`).then((todos) => {
+      this.todos = todos;
     });
   }
 
-  clickHandler(e) {
-    window.location.hash = `#/user/${e.target.parentNode.dataset.id}`;
+  clickHandler() {
+    window.location.hash = `#/user/${this.userId}`;
+  }
+
+  getCompleted(todos) {
+    return todos.filter(t => t.completed).length;
   }
 }
 
-customElements.define('user-list', UserList);
+customElements.define('todo-list', TodoList);

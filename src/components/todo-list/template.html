@@ -1,0 +1,80 @@
+<div id="todos">
+  <button class="btn btn-success top-right" on-click="clickHandler">
+    [[ i18n.BACK_TO_USER ]]
+  </button>
+  <h4>
+    TODO: [[getCompleted(todos)]] / [[todos.length]]
+  </h4>
+  <template is="dom-repeat" items="[[todos]]" as="todo">
+    <div class="checkbox disabled">
+      <label>
+        <input type="checkbox" checked="[[todo.completed]]" disabled> [[todo.title]]
+      </label>
+    </div>
+  </template>
+</div>
+
+<style>
+  #todos {
+    padding-top: 10px;
+  }
+
+  .top-right {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+  }
+
+  button {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+
+  h4 {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+
+  .checkbox {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .checkbox.disabled label,
+  .checkbox.disabled input {
+    cursor: not-allowed;
+  }
+
+  .checkbox label {
+    min-height: 20px;
+    padding-left: 0px;
+    margin-bottom: 0;
+    font-weight: normal;
+  }
+
+  label {
+    display: inline-block;
+    max-width: 100%;
+  }
+</style>

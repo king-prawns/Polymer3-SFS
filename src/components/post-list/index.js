@@ -3,7 +3,7 @@ import '@polymer/polymer/lib/elements/dom-repeat';
 import * as view from './template.html';
 import api from '../api';
 
-export class UserList extends PolymerElement {
+export class PostList extends PolymerElement {
   static get template() {
     return view;
   }
@@ -13,7 +13,7 @@ export class UserList extends PolymerElement {
       i18n: {
         type: Object
       },
-      users: {
+      posts: {
         type: Array,
         value: []
       }
@@ -26,14 +26,14 @@ export class UserList extends PolymerElement {
   }
 
   fetchData() {
-    api.get('/users').then((users) => {
-      this.users = users;
+    api.get('/posts').then((posts) => {
+      this.posts = posts;
     });
   }
 
   clickHandler(e) {
-    window.location.hash = `#/user/${e.target.parentNode.dataset.id}`;
+    window.location.hash = `#/user/${e.target.dataset.id}`;
   }
 }
 
-customElements.define('user-list', UserList);
+customElements.define('post-list', PostList);

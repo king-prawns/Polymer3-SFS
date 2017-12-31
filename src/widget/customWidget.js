@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 (function (window) {
   function myLibrary() {
     function fullName(firstName, lastName) {

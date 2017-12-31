@@ -13,6 +13,7 @@ module.exports = {
     'arrow-body-style': ['error', 'as-needed'],
     'linebreak-style': 0,
     'import/prefer-default-export': 0,
+    'no-confusing-arrow': 0,
     'import/no-extraneous-dependencies': 0
   },
   settings: {
